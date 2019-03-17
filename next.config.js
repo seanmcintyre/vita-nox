@@ -1,4 +1,6 @@
-// next.config.js
+const debug = process.env.NODE_ENV !== 'production';
+const assetPrefix = debug ? '' : '/vita-nox/';
+
 const withTypescript = require('@zeit/next-typescript')
 module.exports = withTypescript({
   exportPathMap: function () {
@@ -8,5 +10,8 @@ module.exports = withTypescript({
       }
     }
   },
-  assetPrefix: '/vita-nox'
+  assetPrefix,
+  publicRuntimeConfig: {
+    assetPrefix
+  }
 })

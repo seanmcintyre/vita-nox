@@ -7,5 +7,6 @@ module.exports = withTypescript({
         page: '/'
       }
     }
-  }
+  },
+  assetPrefix: '/vita-nox'
 })

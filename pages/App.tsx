@@ -3,18 +3,12 @@ import styled from 'styled-components';
 import { getClubEvents } from '../facebook';
 import { Venues } from './Venues';
 
-const clubs = [
-  'BossaNovaCivicClub',
-  'moodringnyc',
-  'nowadaysnyc',
-  'elsewherespace',
-];
-
 export const App = () => {
   const [events, setEvents] = useState({});
 
   useEffect(() => {
-    clubs.forEach(club => getClubEvents(FB, setEvents, club));
+    // clubs.forEach(club => getClubEvents(FB, setEvents, club));
+    getClubEvents(setEvents);
   }, []);
 
   return (
@@ -28,15 +22,73 @@ export const App = () => {
 const Events = ({ events }) =>
   events ? (
     <EventsWrapper>
+      <h1>This Weekend</h1>
       <Weekend>
         <WeekendNight>
           <h1>Friday {nextDate(5)}</h1>
+          <div>
+            {Object.keys(events).map((venue: any, i) =>
+              events[venue].events.length > 0 ? (
+                events[venue].events &&
+                events[venue].events
+                  .filter(event => event.time.includes(nextDate(5)))
+                  .map((event: any, i: number) => (
+                    <>
+                      <h3>{venue}</h3>
+                      <h4>{event.title}</h4>
+                      <div>{event.lineup}</div>
+                      <br />
+                    </>
+                  ))
+              ) : (
+                <></>
+              ),
+            )}
+          </div>
         </WeekendNight>
         <WeekendNight>
           <h1>Saturday {nextDate(6)}</h1>
+          <div>
+            {Object.keys(events).map((venue: any, i) =>
+              events[venue].events.length > 0 ? (
+                events[venue].events &&
+                events[venue].events
+                  .filter(event => event.time.includes(nextDate(6)))
+                  .map((event: any, i: number) => (
+                    <>
+                      <h3>{venue}</h3>
+                      <h4>{event.title}</h4>
+                      <div>{event.lineup}</div>
+                      <br />
+                    </>
+                  ))
+              ) : (
+                <></>
+              ),
+            )}
+          </div>
         </WeekendNight>
         <WeekendNight>
           <h1>Sunday {nextDate(7)}</h1>
+          <div>
+            {Object.keys(events).map((venue: any, i) =>
+              events[venue].events.length > 0 ? (
+                events[venue].events &&
+                events[venue].events
+                  .filter(event => event.time.includes(nextDate(7)))
+                  .map((event: any, i: number) => (
+                    <>
+                      <h3>{venue}</h3>
+                      <h4>{event.title}</h4>
+                      <div>{event.lineup}</div>
+                      <br />
+                    </>
+                  ))
+              ) : (
+                <></>
+              ),
+            )}
+          </div>
         </WeekendNight>
       </Weekend>
       <br />

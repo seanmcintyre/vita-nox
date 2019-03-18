@@ -3,14 +3,17 @@ import styled from 'styled-components';
 
 export const Venues = ({ events }) => (
   <>
+    <h1>Upcoming</h1>
     {Object.keys(events).map((venue: any, i) =>
-      events[venue].length > 0 ? (
+      events[venue].events.length > 0 ? (
         <div key={i}>
           <h1>{venue}</h1>
-          {events[venue] &&
-            events[venue].map((event: any, i: number) => (
-              <Event event={event} key={i} />
-            ))}
+          {events[venue].events &&
+            events[venue].events
+              .slice(0, 5)
+              .map((event: any, i: number) => (
+                <Event event={event} key={i} />
+              ))}
         </div>
       ) : (
         <></>
@@ -21,12 +24,9 @@ export const Venues = ({ events }) => (
 
 const Event = ({ event }) => (
   <EventWrapper>
-    <h2>{event.name}</h2>
-    <h2>
-      {new Date(event.start_time)
-        .toLocaleString('en-US')
-        .replace(':00:00', '')}
-    </h2>
+    <h2>{event.title}</h2>
+    <h2>{event.lineup}</h2>
+    <h2>{event.time.replace(' / ', '')}</h2>
   </EventWrapper>
 );
 

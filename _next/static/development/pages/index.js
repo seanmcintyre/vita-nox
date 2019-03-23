@@ -1,9 +1,282 @@
 ((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./facebook/index.ts":
-/*!***************************!*\
-  !*** ./facebook/index.ts ***!
-  \***************************/
+/***/ "./components/GlobalStyles.ts":
+/*!************************************!*\
+  !*** ./components/GlobalStyles.ts ***!
+  \************************************/
+/*! exports provided: GlobalStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyles", function() { return GlobalStyles; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    box-sizing: border-box;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif;\n    font-size: 16px;\n    background: rgb(33,33,33);\n    color: rgba(217,217,217);\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    padding: 0;\n    margin: 0;\n  }\n\n  body {\n    padding: 0;\n    margin: 0;\n  }\n\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
+
+/***/ }),
+
+/***/ "./components/Venues.tsx":
+/*!*******************************!*\
+  !*** ./components/Venues.tsx ***!
+  \*******************************/
+/*! exports provided: Venues */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Venues", function() { return Venues; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+var _jsxFileName = "/Users/mcintyres/Code/nox/vita-nox/components/Venues.tsx";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 1rem;\n  border: 1px solid rgba(255, 255, 255, 0.3334);\n  border-radius: 0.125rem;\n  display: block;\n  margin: 1rem 0;\n\n  @media screen and (min-width: 30rem) {\n    margin: 1rem 20rem 1rem 0;\n    padding: 1rem 2rem;\n    display: inline-block;\n  }\n\n  h2 {\n    font-size: 1rem;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+var Venues = function Venues(_ref) {
+  var data = _ref.data;
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "Upcoming"), Venue(data).map(function (venue, i) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      key: i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+      style: {
+        color: 'rgb(220,50,70)'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, venue), data[venue] && data[venue].events && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Events, {
+      events: data[venue].events,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }));
+  }));
+};
+
+var Venue = function Venue(events) {
+  return _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(events).map(function (venue) {
+    return events[venue].events.length > 0 && venue;
+  });
+};
+
+var Events = function Events(_ref2) {
+  var events = _ref2.events;
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, events.slice(0, 5).map(function (event, i) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Event, {
+      key: i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, event.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+      style: {
+        color: 'rgb(50,110,250)'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, event.lineup), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, event.time.replace(' / ', '')));
+  }));
+};
+
+var Event = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+
+/***/ }),
+
+/***/ "./components/Weekend.tsx":
+/*!********************************!*\
+  !*** ./components/Weekend.tsx ***!
+  \********************************/
+/*! exports provided: Weekend */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Weekend", function() { return Weekend; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+var _jsxFileName = "/Users/mcintyres/Code/nox/vita-nox/components/Weekend.tsx";
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  /* flex-grow: 1; */\n  border: 1px solid rgba(255, 255, 255, 0.3334);\n  margin: 1rem 0;\n  border-radius: 0.125rem;\n  padding: 1rem;\n  min-height: 30rem;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  /* display: flex; */\n  width: 100%;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+var Weekend = function Weekend(_ref) {
+  var data = _ref.data;
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "This Weekend"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(WeekendWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, [5, 6, 7].filter(function (day) {
+    return nextDate(day) >= new Date().getDate();
+  }).map(function (day) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(WeekendNight, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, dayName[day], " ", nextDate(day)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(data).map(function (venue) {
+      return data[venue].events.length > 0 && data[venue].events && data[venue].events.filter(function (event) {
+        return event.time.includes(nextDate(day));
+      }).map(function (event) {
+        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+          style: {
+            color: 'rgb(220,50,70)'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26
+          },
+          __self: this
+        }, venue), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+          },
+          __self: this
+        }, event.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+          style: {
+            color: 'rgb(50,110,250)'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        }, event.lineup), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          },
+          __self: this
+        }));
+      });
+    })));
+  })));
+};
+
+var nextDate = function nextDate(dayNum) {
+  return new Date().getDay() < 6 ? new Date().getDate() + (dayNum - 1 - new Date().getDay() + 7) % 7 + 1 : new Date().getDate() + (dayNum - 1 - new Date().getDay()) % 7 + 1;
+};
+
+var WeekendWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var WeekendNight = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
+var dayName = {
+  5: 'Friday',
+  6: 'Saturday',
+  7: 'Sunday'
+};
+
+/***/ }),
+
+/***/ "./components/getClubEvents.ts":
+/*!*************************************!*\
+  !*** ./components/getClubEvents.ts ***!
+  \*************************************/
 /*! exports provided: getClubEvents */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14,40 +287,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
 
 
-// export function initFBSDK() {
-//   if ((window as any).FB === undefined) {
-//     console.log('FB undefined -> provide callback');
-//     (window as any).fbAsyncInit = function() {
-//       initialize();
-//     };
-//   } else {
-//     console.log('FB defined -> call init right away');
-//     initialize();
-//   }
-//   function initialize() {
-//     (window as any).FB.init({
-//       appId: '2078600758914129',
-//       cookie: true,
-//       xfbml: true,
-//       version: 'v3.2',
-//     });
-//   }
-// }
-// export function getEvents(setEvents) {
-//   getClubEvents(FB, setEvents, 'BossaNovaCivicClub');
-//   getClubEvents(FB, setEvents, 'moodringnyc');
-//   getClubEvents(FB, setEvents, 'nowadaysnyc');
-//   getClubEvents(FB, setEvents, 'elsewherespace');
-// }
 function getClubEvents(setEvents) {
-  // FB.api(`/${club}/events`, 'GET', settings, (response: any) => {
-  //   const newEvents = parseEvents(response, club);
-  //   setEvents(events => ({
-  //     ...events,
-  //     [club]: newEvents,
-  //   }));
-  // });
-  fetch('https://api.apify.com/v2/datasets/PdumrJ2iWNSc8HCcY/items?format=json&clean=1').then(function (res) {
+  fetch('https://api.apify.com/v2/actor-tasks/YDocxufNmzfg9xrr7/runs/last/dataset/items?token=YuDiJjt4YRgyzP3Exzpkjkaqe&format=json&clean=1').then(function (res) {
     return res.json();
   }).then(function (out) {
     return out.map(function (data) {
@@ -56,30 +297,7 @@ function getClubEvents(setEvents) {
       });
     });
   });
-} // function parseEvents(response: any, venue: any) {
-//   const events = response.data
-//     .sort(
-//       (a: any, b: any) =>
-//         (new Date(a.start_time) as any) -
-//         (new Date(b.start_time) as any),
-//     )
-//     .map((event: any) => ({
-//       ...event,
-//       times: {
-//         start: new Date(Date.parse(event.start_time)),
-//         end: new Date(Date.parse(event.end_time)),
-//       },
-//     }));
-//   console.log(`~*~*~ ${venue} ~*~*~`);
-//   console.log('events: ', events);
-//   return events;
-//   // console.log('paging: ', response.paging);
-// }
-// const settings = {
-//   fields: 'name,start_time,end_time,event_times,id',
-//   limit: '50',
-//   time_filter: 'upcoming',
-// };
+}
 
 /***/ }),
 
@@ -7906,51 +8124,19 @@ if ( true && typeof window !== 'undefined' && typeof navigator !== 'undefined' &
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "App", function() { return App; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _facebook__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../facebook */ "./facebook/index.ts");
-/* harmony import */ var _Venues__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Venues */ "./pages/Venues.tsx");
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _components_getClubEvents__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/getClubEvents */ "./components/getClubEvents.ts");
+/* harmony import */ var _components_Venues__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Venues */ "./components/Venues.tsx");
+/* harmony import */ var _components_Weekend__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Weekend */ "./components/Weekend.tsx");
 
 
 var _jsxFileName = "/Users/mcintyres/Code/nox/vita-nox/pages/App.tsx";
 
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 2rem 4rem;\n  height: 100vw;\n  overflow-y: scroll;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: calc(100% - 10rem);\n  height: calc(100vh - 10rem);\n  position: absolute;\n  top: 5rem;\n  left: 5rem;\n  border-radius: 0.5rem;\n  z-index: -1;\n  opacity: 0.2;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  flex-grow: 1;\n  border: 2px solid rgba(255, 255, 255, 0.8);\n  margin: 1rem;\n  border-radius: 0.25rem;\n  padding: 1rem;\n  min-height: 30rem;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  width: 100%;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 1rem;\n\n  @media screen and (min-width: 30rem) {\n    padding: 2rem 4rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7963,24 +8149,17 @@ function _templateObject() {
 
 
 
+
 var App = function App() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}),
-      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({}),
+      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
       events = _useState2[0],
       setEvents = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
-    // clubs.forEach(club => getClubEvents(FB, setEvents, club));
-    Object(_facebook__WEBPACK_IMPORTED_MODULE_5__["getClubEvents"])(setEvents);
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    Object(_components_getClubEvents__WEBPACK_IMPORTED_MODULE_4__["getClubEvents"])(setEvents);
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Background, {
-    src: "https://media0.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Events, {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Events, {
     events: events,
     __source: {
       fileName: _jsxFileName,
@@ -7992,334 +8171,40 @@ var App = function App() {
 
 var Events = function Events(_ref) {
   var events = _ref.events;
-  return events ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(EventsWrapper, {
+  return events ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(EventsWrapper, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Weekend__WEBPACK_IMPORTED_MODULE_6__["Weekend"], {
+    data: events,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, "This Weekend"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Weekend, {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Venues__WEBPACK_IMPORTED_MODULE_5__["Venues"], {
+    data: events,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(WeekendNight, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "Friday ", nextDate(5)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(events).map(function (venue, i) {
-    return events[venue].events.length > 0 ? events[venue].events && events[venue].events.filter(function (event) {
-      return event.time.includes(nextDate(5));
-    }).map(function (event, i) {
-      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, venue), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h4", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }, event.title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, event.lineup), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }));
-    }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null);
-  }))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(WeekendNight, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, "Saturday ", nextDate(6)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
-  }, _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(events).map(function (venue, i) {
-    return events[venue].events.length > 0 ? events[venue].events && events[venue].events.filter(function (event) {
-      return event.time.includes(nextDate(6));
-    }).map(function (event, i) {
-      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        },
-        __self: this
-      }, venue), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h4", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, event.title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }, event.lineup), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }));
-    }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null);
-  }))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(WeekendNight, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }, "Sunday ", nextDate(7)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(events).map(function (venue, i) {
-    return events[venue].events.length > 0 ? events[venue].events && events[venue].events.filter(function (event) {
-      return event.time.includes(nextDate(7));
-    }).map(function (event, i) {
-      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81
-        },
-        __self: this
-      }, venue), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h4", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
-      }, event.title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83
-        },
-        __self: this
-      }, event.lineup), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 84
-        },
-        __self: this
-      }));
-    }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null);
-  })))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("hr", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Venues__WEBPACK_IMPORTED_MODULE_6__["Venues"], {
-    events: events,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  })) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, "loading...");
-};
-
-var nextDate = function nextDate(dayNum) {
-  return new Date().getDate() + (dayNum - 1 - new Date().getDay() + 7) % 7 + 1;
-};
-
-var Weekend = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject());
-var WeekendNight = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject2());
-var Background = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].img(_templateObject3());
-var EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject4());
-
-/***/ }),
-
-/***/ "./pages/GlobalStyles.ts":
-/*!*******************************!*\
-  !*** ./pages/GlobalStyles.ts ***!
-  \*******************************/
-/*! exports provided: GlobalStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyles", function() { return GlobalStyles; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+  })) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, "loading...");
+}; // const Background = styled.img`
+//   width: calc(100% - 10rem);
+//   height: calc(100vh - 10rem);
+//   position: absolute;
+//   top: 5rem;
+//   left: 5rem;
+//   border-radius: 0.5rem;
+//   z-index: -1;
+//   opacity: 0.2;
+// `;
 
 
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    box-sizing: border-box;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif;\n    font-size: 16px;\n    background: rgb(33,33,33);\n    color: rgba(217,217,217);\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    padding: 0;\n    margin: 0;\n  }\n\n  body {\n    padding: 0;\n    margin: 0;\n  }\n\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
-
-/***/ }),
-
-/***/ "./pages/Venues.tsx":
-/*!**************************!*\
-  !*** ./pages/Venues.tsx ***!
-  \**************************/
-/*! exports provided: Venues */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Venues", function() { return Venues; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-
-var _jsxFileName = "/Users/mcintyres/Code/nox/vita-nox/pages/Venues.tsx";
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  padding: 1rem 2rem;\n  border: 2px solid rgba(255, 255, 255, 0.8);\n  border-radius: 0.25rem;\n  display: inline-block;\n  margin: 1rem 20rem 1rem 5rem;\n\n  h2 {\n    font-size: 1rem;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-var Venues = function Venues(_ref) {
-  var events = _ref.events;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, "Upcoming"), _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(events).map(function (venue, i) {
-    return events[venue].events.length > 0 ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      key: i,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      },
-      __self: this
-    }, venue), events[venue].events && events[venue].events.slice(0, 5).map(function (event, i) {
-      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Event, {
-        event: event,
-        key: i,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      });
-    })) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null);
-  }));
-};
-
-var Event = function Event(_ref2) {
-  var event = _ref2.event;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(EventWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, event.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, event.lineup), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, event.time.replace(' / ', '')));
-};
-
-var EventWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
 
 /***/ }),
 
@@ -8336,49 +8221,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-server/head */ "./node_modules/next-server/head.js");
 /* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _GlobalStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GlobalStyles */ "./pages/GlobalStyles.ts");
+/* harmony import */ var _components_GlobalStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/GlobalStyles */ "./components/GlobalStyles.ts");
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./pages/App.tsx");
 var _jsxFileName = "/Users/mcintyres/Code/nox/vita-nox/pages/index.tsx";
 
- // import { initFBSDK } from '../facebook';
 
 
 
 
 var Index = function Index() {
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   initFBSDK();
-  //   if (FB) {
-  //     FB.getLoginStatus(function(response: any) {
-  //       if (response.status === 'connected') {
-  //         console.log(response.authResponse.accessToken);
-  //         setLoading(false);
-  //       }
-  //     });
-  //   }
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 7
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_GlobalStyles__WEBPACK_IMPORTED_MODULE_2__["GlobalStyles"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_GlobalStyles__WEBPACK_IMPORTED_MODULE_2__["GlobalStyles"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 8
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 10
     },
     __self: this
   }, "Vita Nox"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -8386,13 +8259,13 @@ var Index = function Index() {
     content: "initial-scale=1.0, width=device-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 11
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["App"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 16
     },
     __self: this
   }));
